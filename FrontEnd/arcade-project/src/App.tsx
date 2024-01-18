@@ -1,12 +1,17 @@
-import React from 'react';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import './App.css';
-import Test from './components/Test';
+import "./App.css";
+import Test from "./components/Test";
 
 function App() {
   return (
     <div>
-      <Test />
+      <BrowserRouter>
+        <Routes>
+          {/* 테스트 페이지 */}
+          <Route path="/" element={<Test />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
